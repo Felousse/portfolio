@@ -39,12 +39,11 @@ body {
   display: flex;
   justify-content: flex-end;
   gap: 2rem;
-  padding: 1rem 2 rem;
+  padding: 1rem 2rem;
   position: fixed;
   top: 0;
   width: 100%;
   background: var(--primary);
-  padding: 1rem 2rem;
   z-index: 1000;
 }
 
@@ -52,12 +51,6 @@ body {
   color: var(--accent);
 }
 
-.nav ul {
-  display: flex;
-  justify-content: flex-end;
-  gap: 2rem;
-  list-style: none;
-}
 
 .nav a {
   color: var(--text-light);
@@ -197,7 +190,7 @@ h4 {
   gap: 1rem;
 }
 
-.contact-section i{
+.contact-section i {
   color: var(--accent);
   width: 20px;
 }

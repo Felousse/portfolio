@@ -1,43 +1,47 @@
 /*Reset et configuration de base */
-*{
-  margin:0; 
-  padding:0; 
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   /*Couleurs principales*/
-  primary: #2A4365;  /* Bleu profond*/
-  secondary: #805AD5; /* Violet */
-  accent: #38B2AC; /* Turquoise */
+  --primary: #2A4365;
+  /* Bleu profond*/
+  --secondary: #805AD5;
+  /* Violet */
+  --accent: #38B2AC;
+  /* Turquoise */
 
   /* Fonds */
-  bg-light: #F7FAFC;
-  bg-dark: #1A202C;
+  --bg-light: #F7FAFC;
+  --bg-dark: #1A202C;
 
   /* Textes */
-  text-dark: #2D3748;
-  text-light: #EDF2F7;
+  --text-dark: #2D3748;
+  --text-light: #EDF2F7;
 
   /* Interactions */
-  hover: #4FD1C5;
-  active: #319795;
+  --hover: #4FD1C5;
+  --active: #319795;
 }
 
 /* Base */
 body {
-  font-familiy: 'Roboto' , sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  background-color: var(bg-light);
-  color: var(text-dark);
+  background-color: var(--bg-light);
+  color: var(--text-dark);
 }
 
 .nav {
   position: fixed;
   top: 0;
-  wodth: 100%;
-  background: var(primary);
+  width: 100%;
+  background: var(--primary);
   padding: 1rem 2rem;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .nav ul {
@@ -46,24 +50,24 @@ body {
   gap: 2rem;
   list-style: none;
 }
- .nav a {
-   display: flex;
-   justify-content: flex-end;
-   gap: 2rem;
-   list-style: none;
- }
+
+.nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
 
 .nav a:hover {
-  color: var(accent);
+  color: var(--accent);
 }
 
 /* Conteneurs principaux*/
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  
+
 }
 
 .section {
@@ -71,30 +75,34 @@ body {
 }
 
 /* En-têtes */
-h1, h2, h3, h4 {
-  color: var(primary);
-  margin-bottom: 1 rem;
+h1,
+h2,
+h3,
+h4 {
+  color: var(--primary);
+  margin-bottom: 1rem;
 }
 
 .section-title {
-  taxt-align: center;
+  text-align: center;
   margin-bottom: 3rem;
   font-size: 2.5rem;
-  color: var(primary);
+  color: var(--primary);
 }
-section-title::after {
-  content '';
+
+.section-title::after {
+  content: '';
   display: block;
   width: 100px;
   height: 3px;
-  background-color: var(secondary);
+  background-color: var(--secondary);
   margin: 1rem auto;
 }
 
 /*section Profil*/
 .profile-section {
   padding-top: 6rem;
-  background-color: var(bg-light);
+  background-color: var(--bg-light);
 }
 
 .profile-content {
@@ -108,15 +116,20 @@ section-title::after {
   height: 300px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid var(accent);
+  border: 4px solid var(--accent);
 }
-
-
 
 /* Section Compétences */
 .skills-section {
-  background-color: var(bg-dark);
-  color: var(text-light);
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  text-align: center;
 }
 
 .skill-item {
@@ -147,22 +160,101 @@ section-title::after {
 }
 
 .date {
-  color: var(secondary);
+  color: var(--secondary);
   font-weight: bold;
 }
 
 .company {
-  color: var(primary);
+  color: var(--primary);
   font-weight: bold;
 }
 
+/* Section Contact*/
+.contact-section {
+  background-color: var(--primary);
+  color: var(--text-light);
+}
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
 
+.contact-item {
+  text-align: center;
+  padding: 1.5rem;
+}
 
+.contact-icon {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
 
-  
-  
-  
-  
-  
+/* Footer */
+footer {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  text-align: center;
+  padding: 2rem;
+}
 
+/* Utilitaires */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--accent);
+  color: var(--text-light);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--hover);
+}
+
+/*Media Queries*/
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}
+
+/*Animations*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}

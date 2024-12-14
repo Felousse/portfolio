@@ -36,12 +36,20 @@ body {
 }
 
 .nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding: 1rem 2 rem;
   position: fixed;
   top: 0;
   width: 100%;
   background: var(--primary);
   padding: 1rem 2rem;
   z-index: 1000;
+}
+
+.nav .active {
+  color: var(--accent);
 }
 
 .nav ul {
@@ -173,7 +181,27 @@ h4 {
 .contact-section {
   background-color: var(--primary);
   color: var(--text-light);
+  padding: 2rem;
+  border-radius: 8px;
 }
+
+.contact-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-section li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-section i{
+  color: var(--accent);
+  width: 20px;
+}
+
 
 .contact-grid {
   display: grid;
@@ -190,6 +218,14 @@ h4 {
   font-size: 2rem;
   color: var(--accent);
   margin-bottom: 1rem;
+}
+
+main {
+  padding-top: 60px; /*compense le nav fixe*/
+}
+
+section {
+  margin-bottom: 2rem;
 }
 
 /* Footer */

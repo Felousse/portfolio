@@ -1,0 +1,168 @@
+/*Reset et configuration de base */
+*{
+  margin:0; 
+  padding:0; 
+  box-sizing: border-box;
+}
+:root {
+  /*Couleurs principales*/
+  primary: #2A4365;  /* Bleu profond*/
+  secondary: #805AD5; /* Violet */
+  accent: #38B2AC; /* Turquoise */
+
+  /* Fonds */
+  bg-light: #F7FAFC;
+  bg-dark: #1A202C;
+
+  /* Textes */
+  text-dark: #2D3748;
+  text-light: #EDF2F7;
+
+  /* Interactions */
+  hover: #4FD1C5;
+  active: #319795;
+}
+
+/* Base */
+body {
+  font-familiy: 'Roboto' , sans-serif;
+  line-height: 1.6;
+  background-color: var(bg-light);
+  color: var(text-dark);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  wodth: 100%;
+  background: var(primary);
+  padding: 1rem 2rem;
+  z-index: 100;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  list-style: none;
+}
+ .nav a {
+   display: flex;
+   justify-content: flex-end;
+   gap: 2rem;
+   list-style: none;
+ }
+
+.nav a:hover {
+  color: var(accent);
+}
+
+/* Conteneurs principaux*/
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+/* En-têtes */
+h1, h2, h3, h4 {
+  color: var(primary);
+  margin-bottom: 1 rem;
+}
+
+.section-title {
+  taxt-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: var(primary);
+}
+section-title::after {
+  content '';
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color: var(secondary);
+  margin: 1rem auto;
+}
+
+/*section Profil*/
+.profile-section {
+  padding-top: 6rem;
+  background-color: var(bg-light);
+}
+
+.profile-content {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.profile-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(accent);
+}
+
+
+
+/* Section Compétences */
+.skills-section {
+  background-color: var(bg-dark);
+  color: var(text-light);
+}
+
+.skill-item {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+}
+
+/*Section Expériences */
+.experience-item {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.date {
+  color: var(secondary);
+  font-weight: bold;
+}
+
+.company {
+  color: var(primary);
+  font-weight: bold;
+}
+
+
+
+
+
+  
+  
+  
+  
+  
+

@@ -17,6 +17,15 @@ fatch('https://api.quotable.io/random')
   quoteElement.textContent = "${data.content}" - ${data.author};
 });
 </script>
+    <script>
+      //Recuperation et affichage de la blague
+fetch('https://api.chucknorris.io/jokes/random')
+.then(response => response.json())
+.then(data => {
+  const jokeElement = document.getElementById('random-joke');
+jokeElement.src = data.icon_url;
+});
+    </script>
   </head>
   <body>
     <header class="header">

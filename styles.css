@@ -400,3 +400,19 @@ footer {
 .project-item p {
   margin-bottom: 1.5rem;
 }
+
+//Récuperation et afficharge del a citation inspirante
+fatch('https://api.quotable.io/random')
+.then(response => response.json())
+.then(data => {
+  const quoteElement = document.getElementById('inspirational-quoter');
+  quoteElement.textContent = "${data.content}" - ${data.author};
+});
+
+//Recuperation et affichage de la blaque
+fetch('https://api.chucknorris.io/jokes/random')
+.then(response => response.json())
+.then(data => {
+  const jokeElement = document.getElementById('random-joke');
+  jokeElement.textContent = data.value;
+});

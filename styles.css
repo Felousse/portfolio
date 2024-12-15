@@ -380,3 +380,23 @@ footer {
 .fade-in {
   animation: fadeIn 0.6s ease forwards;
 }
+.projects-section {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+.project-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-item h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.project-item p {
+  margin-bottom: 1.5rem;
+}

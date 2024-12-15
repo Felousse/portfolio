@@ -193,7 +193,7 @@ h4 {
   line-height: 1.6;
 }
 
-experience-item li:last-child {
+.experience-item li:last-child {
   margin-bottom: 0;
   padding: 1rem;
 }
@@ -227,7 +227,7 @@ experience-item li:last-child {
 /* Section Contact*/
 .contact-section {
   background-color: var(--bg-dark);
-  color: var(--accent);
+  color: var(--text-light);
   width: 20px
   padding: 1.5rem;
   border-radius: 8px;
@@ -236,7 +236,6 @@ experience-item li:last-child {
 
 .contact-section ul {
   list-style: none;
-  padding: 0;
   padding: 1.5rem;
 }
 
@@ -349,7 +348,7 @@ footer {
   }
 }
 
-@media (maw-width: 480px) {
+@media (max-width: 480px) {
   .nav {
     justify-content: center;
   }

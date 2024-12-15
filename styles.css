@@ -401,18 +401,16 @@ footer {
   margin-bottom: 1.5rem;
 }
 
-//Récuperation et afficharge del a citation inspirante
-fatch('https://api.quotable.io/random')
-.then(response => response.json())
-.then(data => {
-  const quoteElement = document.getElementById('inspirational-quoter');
-  quoteElement.textContent = "${data.content}" - ${data.author};
-});
+.joke {
+  background-color: #f0f0f0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
 
-//Recuperation et affichage de la blaque
-fetch('https://api.chucknorris.io/jokes/random')
-.then(response => response.json())
-.then(data => {
-  const jokeElement = document.getElementById('random-joke');
-  jokeElement.textContent = data.value;
-});
+.joke img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

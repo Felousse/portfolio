@@ -185,7 +185,8 @@ h4 {
 /* Section Contact*/
 .contact-section {
   background-color: var(--bg-dark);
-  color: var(--text-light);
+  color: var(--accent);
+  width: 20px
   padding: 2rem;
   border-radius: 8px;
   margin: 2rem 0;
